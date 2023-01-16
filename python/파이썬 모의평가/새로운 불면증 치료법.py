@@ -9,7 +9,6 @@ for tc in range(1, TC + 1):
             if cal[j] not in string:
                 string.append(cal[j])
                 calcul.append(int(cal[j]))
-                # string.sort()
         if sum(calcul) == sum(range(10)):
             if '0' in string:
                 print(f'#{tc} {cal}')
