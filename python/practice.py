@@ -84,3 +84,27 @@
 #             numcnt -= 1
 #             break
 # print(numcnt)
+
+# num = int(input())
+# for i in range(1, 10):
+#     print(f'{num} * {i} = {num * i}')
+
+# num = int(input())
+# numlist = range(0, num + 1)
+# numsum = 0
+# for i in range(int(len(numlist))):
+#     numsum += numlist[i]
+# print(numsum)
+# print(sum(numlist))
+
+allprice = int(input())
+buy = int(input())
+buysum = 0
+for i in range(buy):
+    a, b = map(int, input().split())
+    buysum += (a * b)
+if allprice == buysum:
+    print('Yes')
+if allprice != buysum:
+    print('No')
+    
