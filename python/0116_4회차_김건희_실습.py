@@ -5,9 +5,10 @@
 # c = int(input())
 # d = int(input())
 # e = int(input())
+
 # numlist = [a, b, c, d, e]
 # for i in range(int(len(numlist))):
-#     if numlist[i] < 40:
+#     if numlist[i] < 40: # 40점 미만인 경우 그 점수는 40점으로
 #         numlist[i] = 40
 # print(f'{int(sum(numlist)/int(len(numlist)))}')
 

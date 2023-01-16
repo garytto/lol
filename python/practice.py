@@ -1,59 +1,86 @@
-# 문제 1
+# a, b = map(int, input().split())
+# if a > b:
+#     print('>')
+# if a < b:
+#     print('<')
+# if a == b:
+#     print('==')
 
-# a = str(input('문자열을 입력하세요 > '))
+# a = int(input())
 
-# cnt = 0
-# for name in a:
-#     if name == 'e':
-#         cnt += 1
+# if a <= 100 and a > 89:
+#     print('A')
+# if a < 90 and a > 79:
+#     print('B')
+# if a < 80 and a > 69:
+#     print('C')
+# if a < 70 and a > 59:
+#     print('D')
+# if a < 60 and a > 0:
+#     print('F')
 
-# print(cnt)
+# a = int(input())
 
-# 문제 2
+# if (a%4 == 0 and a%100 != 0) or a%400 == 0:
+#     print('1')
+# else:
+#     print('0')
 
-# a = str(input('문자열을 입력하시오 > '))
+# x = int(input())
+# y = int(input())
 
-# moeum_list = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
-# cnt = 0
-# h = len(moeum_list)
-# print(h)
-# for num in a:
-#     for i in range(h):
-#         if num == moeum_list[i]:
-#             cnt += 1
-# print(cnt)
+# if x > 0 and y > 0:
+#     print('1')
+# if x < 0 and y > 0:
+#     print('2')
+# if x < 0 and y < 0:
+#     print('3')
+# if x > 0 and y < 0:
+#     print('4')
 
-# 문제 3
-# import datetime
+# h, m = map(int,input().split())
 
-# dict_variable = {
-#     "이름" : "김건희",
-#     "생년" : "19960912",
-#     "회사" : "하이퍼그로스"
-# }
+# num = int(m - 45)
+# if num < 0:
+#     m = 60 + num
+#     h -= int(1)
+# if num >= 60:
+#     m = int(num - 60)
+#     h += int(1)
+# if num < 60 and num >= 0:
+#     m = num
 
-# year = datetime.date.today()
-# birth = dict_variable["생년"][0:4]
-# age = int(year.year) - int(birth)
-# print(age)
+# # 24시 이상이거나 0시 미만인 경우를 대응
+# if h < 0:
+#     h = 23
+# if h > 23:
+#     h = 0
 
-# 문제 4
+# print(f'{h} {m}')
 
-# info = {}
-# info['이름'] = str(input('이름을 입력하시오 > '))
-# info['전화번호'] = str(input('전화번호를 입력 하시오 > '))
-# info['거주지'] = str(input('거주지를 입력 하시오 > '))
+# h, m = map(int,input().split())
+# x = int(input())
+# num = [int(x//60),int(x%60)] # 입력 받은 수를 시와 분으로 나눠 저장.
+# # 1차 계산
+# h += num[0] 
+# m += num[1]
+# if m >= 60:
+#     h += 1
+#     m -= 60
+# # 24시 이상이거나 0시 미만인 경우를 대응
+# if h > 23:
+#     h -= 24
+# print(f'{h} {m}')
 
-# for a in info:
-#     print(a,':', info[a])
+# numcnt = int(input())
 
-# 문제 5
-
-info = {}
-info['이름'] = str(input('이름을 입력하시오 > '))
-info['인적사항'] = {}
-info['인적사항']['전화번호'] = str(input('전화번호를 입력하시오 > '))
-info['인적사항']['이메일'] = str(input('이메일을 입력 하시오 > '))
-info['인적사항']['거주지'] = str(input('거주지를 입력 하시오 > '))
-
-print(info.values())
+# for i in range(numcnt):
+#     num = list(input())
+#     for j in range(len(num)-1):
+#         if num[j]==num[j + 1]: 
+#             pass
+        
+#         elif num[j] in num[j + 2:]:
+#             numcnt -= 1
+#             break
+# print(numcnt)
